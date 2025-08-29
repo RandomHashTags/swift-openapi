@@ -1,7 +1,7 @@
 
 /// Describes a single API operation on a path.
 /// 
-/// This object MAY be extended with [Specification Extensions](https://spec.openapis.org/oas/v3.1.0#specification-extensions).
+/// This object _MAY_ be extended with [Specification Extensions](https://spec.openapis.org/oas/v3.1.0#specification-extensions).
 /// 
 /// https://spec.openapis.org/oas/v3.1.0#operation-object
 public protocol OperationObjectProtocol: AnyOperationObjectProtocol, ~Copyable {

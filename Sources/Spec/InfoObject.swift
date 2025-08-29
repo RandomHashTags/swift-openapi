@@ -1,5 +1,7 @@
 
-public struct InfoObject: Codable, Sendable {
+import Blueprint
+
+public struct InfoObject: Codable, InfoObjectProtocol {
     public var title:String
     public var summary:String?
     public var description:String?

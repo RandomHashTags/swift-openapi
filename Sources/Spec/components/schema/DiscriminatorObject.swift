@@ -5,4 +5,12 @@ import Blueprint
 public struct DiscriminatorObject: Codable, DiscriminatorObjectProtocol {
     public var propertyName:String
     public var mapping:[String:String]?
+
+    public init(
+        propertyName: String,
+        mapping: [String:String]? = nil
+    ) {
+        self.propertyName = propertyName
+        self.mapping = mapping
+    }
 }

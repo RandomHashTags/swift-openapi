@@ -7,10 +7,10 @@
 public protocol OpenAPIObjectProtocol: AnyOpenAPIObjectProtocol, ~Copyable {
     associatedtype InfoObject:InfoObjectProtocol
     associatedtype ServerObject:ServerObjectProtocol
-    associatedtype PathsObject
+    associatedtype PathsObject:PathsObjectProtocol
     associatedtype PathItemObject:PathItemObjectProtocol
     associatedtype ComponentsObject:ComponentsObjectProtocol
-    associatedtype SecurityRequirementObject
+    associatedtype SecurityRequirementObject:SecurityRequirementObjectProtocol
     associatedtype TagObject:TagObjectProtocol
     associatedtype ExternalDocumentationObject:ExternalDocumentationObjectProtocol
 

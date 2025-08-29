@@ -9,14 +9,14 @@
 /// https://spec.openapis.org/oas/v3.1.0#components-object
 public protocol ComponentsObjectProtocol: AnyComponentsObjectProtocol, ~Copyable {
     associatedtype SchemaObject:SchemaObjectProtocol
-    associatedtype ResponseObject
-    associatedtype ParameterObject
+    associatedtype ResponseObject:ResponseObjectProtocol
+    associatedtype ParameterObject:ParameterObjectProtocol
     associatedtype ExampleObject:ExampleObjectProtocol
     associatedtype RequestBodyObject:RequestBodyObjectProtocol
     associatedtype HeaderObject:HeaderObjectProtocol
     associatedtype SecuritySchemeObject:SecuritySchemeObjectProtocol
     associatedtype LinkObject:LinkObjectProtocol
-    associatedtype CallbackObject
+    associatedtype CallbackObject:CallbackObjectProtocol
     associatedtype PathItemObject:PathItemObjectProtocol
 
     /// An object to hold reusable [Schema Objects](https://spec.openapis.org/oas/v3.1.0#schema-object).

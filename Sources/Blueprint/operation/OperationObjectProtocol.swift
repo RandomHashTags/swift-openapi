@@ -6,10 +6,10 @@
 /// https://spec.openapis.org/oas/v3.1.0#operation-object
 public protocol OperationObjectProtocol: AnyOperationObjectProtocol, ~Copyable {
     associatedtype ExternalDocumentationObject:ExternalDocumentationObjectProtocol
-    associatedtype ParameterObject
+    associatedtype ParameterObject:ParameterObjectProtocol
     associatedtype RequestBodyObject:RequestBodyObjectProtocol
-    associatedtype ResponsesBody
-    associatedtype SecurityRequirementObject
+    associatedtype ResponsesObject:ResponsesObjectProtocol
+    associatedtype SecurityRequirementObject:SecurityRequirementObjectProtocol
     associatedtype ServerObject:ServerObjectProtocol
 
     /// Additional external documentation for this operation.
@@ -28,7 +28,7 @@ public protocol OperationObjectProtocol: AnyOperationObjectProtocol, ~Copyable {
     var requestBody: RequestBodyObject? { get }
 
     /// The list of possible responses as they are returned from executing this operation.
-    var responses: ResponsesBody? { get }
+    var responses: ResponsesObject? { get }
 
     /// A map of possible out-of band callbacks related to the parent operation.
     /// The key is a unique identifier for the Callback Object.

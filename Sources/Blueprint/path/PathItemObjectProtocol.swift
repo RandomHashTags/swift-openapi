@@ -16,7 +16,7 @@ public protocol PathItemObjectProtocol: AnyPathItemObjectProtocol, ~Copyable {
     associatedtype PATCHOperation:OperationObjectProtocol
     associatedtype TRACEOperation:OperationObjectProtocol
     associatedtype ServerObject:ServerObjectProtocol
-    associatedtype ParameterObject
+    associatedtype ParameterObject:ParameterObjectProtocol
 
     /// A definition of a GET operation on this path.
     var get: GETOperation? { get }
